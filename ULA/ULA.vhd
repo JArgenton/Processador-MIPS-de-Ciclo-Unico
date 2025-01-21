@@ -70,11 +70,12 @@ begin
             when "110" =>  -- Subtração
                 Y <= op_Subtracao;
                 negative <= op_Subtracao(7) and not aux_negative; -- NAO SEI SE ISSO FUNCIONA
+                overflow <= '0';
 
             when "000" =>  -- AND
                 Y <= op_And;
                 overflow <= '0';
-					 negative <= '0';
+				negative <= '0';
 
 
             when "001" =>  -- OR
